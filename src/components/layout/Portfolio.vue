@@ -14,6 +14,8 @@ const portfolioItems = {
   "Web App": [
     { title: "Task Manager", img: "/images/photo.png" },
     { title: "Social Media Dashboard", img: "/images/photo.png" },
+    { title: "E-Commerce UI", img: "/images/photo.png" },
+    { title: "Stock Trading App", img: "/images/photo.png" },
   ],
   Resume: [
     { title: "Professional Resume", img: "/images/photo.png" },
@@ -48,7 +50,7 @@ const filteredItems = computed(() => portfolioItems[activeCategory.value]);
     
     <div class="container">
       <div v-for="(item, index) in filteredItems" :key="index" class="item">
-        <img :src="item.img" alt="" loading="lazy" />
+        <img :src="item.img" alt="" />
         <h3>{{ item.title }}</h3>
       </div>
     </div>
@@ -59,17 +61,14 @@ const filteredItems = computed(() => portfolioItems[activeCategory.value]);
 .portfolio {
   background: white;
   color: #333;
-  text-align: center;
-  padding: 80px 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center everything */
-  min-height: 100vh; /* Ensures the section takes the full viewport height */
 }
 
 h1 {
   font-size: 42px;
+  margin-top: 3rem;
   font-weight: 600;
   margin-bottom: 30px;
   text-transform: uppercase;
@@ -79,12 +78,10 @@ h1 {
 
 ul {
   display: flex;
-  gap: 15px;
-  margin-bottom: 35px;
+  margin: 10px;
   padding: 0;
   list-style: none;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 20px;
 }
 
 li {
@@ -109,30 +106,27 @@ li.active {
 }
 
 li:hover {
-  background: #ff4c60;
+  background: #ff6274;
   color: white;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  width: 100%;
-  max-width: 1200px;
-  min-height: 80vh; /* Increased container height */
-  align-items: center;
-  justify-content: center; /* Ensures items are centered */
+  width: 70%;
+  display: flex;align-items: center; justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 3rem;
+  overflow: hidden;
+  
 }
 
 .item {
-  position: relative;
+  width: 220px;
+  height: 100%;
+  margin-top: 10px 20px;
+  display: flex;
+  align-items: center; justify-content: center;
   border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: #f8f9fa;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Centers text */
 }
 
 .item:hover {
@@ -170,49 +164,23 @@ h3 {
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 36px;
+  h1{
+    font-size: 20px;
+    margin-top: 2rem;
   }
-
-  ul {
+  ul{
     flex-wrap: wrap;
     justify-content: center;
   }
-
-  li {
+  li{
+    padding: 10px 12px;
     font-size: 13px;
-    padding: 10px 18px;
   }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centering items */
-    gap: 20px;
+  .item{
+    height: 200px;
     width: 100%;
-  }
-
-  .item {
-    width: 90%; /* Ensures items don’t shrink too much */
-    max-width: 350px;
-    /* text-align: center; */
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-  }
-
-  h3 {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    padding: 8px 12px;
-    font-size: 14px;
+    overflow: hidden;
   }
 }
+
 </style>

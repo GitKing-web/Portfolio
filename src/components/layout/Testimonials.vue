@@ -67,8 +67,6 @@ h1 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    max-width: 1200px;
-    margin: auto;
 }
 
 .card {
@@ -125,16 +123,9 @@ img {
     font-size: 14px;
     color: #777;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
+@media (max-width:768px) {
+    .card{
+        width: 100%;
     }
 }
 </style>

@@ -40,9 +40,7 @@ const submitForm = (event) => {
 <style scoped>
 .contact {
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background: #f9f9f9;
     padding: 20px;
 }
@@ -111,5 +109,14 @@ button:hover {
     color: #28a745;
     font-weight: bold;
     margin-top: 10px;
+}
+@media (max-width:768px) {
+    .form-container{
+        width: 100%;
+    }
+    .contact-card{
+        margin-top: -30rem;
+    }
+    
 }
 </style>

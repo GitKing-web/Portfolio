@@ -154,26 +154,24 @@ onMounted(() => {
 }
 
 /* RESPONSIVENESS */
-@media (max-width: 1024px) {
-  .wrapper h1 { font-size: 40px; }
-  .wrapper h2 { font-size: 28px; }
-  .wrapper h3 { font-size: 22px; }
-}
-
-@media (max-width: 768px) {
-  .intro { height: 100vh; padding: 20px; }
-  .wrapper h1 { font-size: 36px; }
-  .wrapper h2 { font-size: 26px; }
-  .wrapper h3 { font-size: 20px; }
-  .hire-me { font-size: 16px; padding: 10px 16px; }
-  .arrow { font-size: 24px; margin-top: 8rem; }
-}
-
-@media (max-width: 480px) {
-  .wrapper h1 { font-size: 28px; }
-  .wrapper h2 { font-size: 20px; }
-  .wrapper h3 { font-size: 16px; flex-wrap: wrap; }
-  .hire-me { font-size: 14px; padding: 10px 16px; }
-  .arrow { font-size: 22px; }
+@media (max-width:768px) {
+  .content-wrapper {
+    margin-top: -35rem;
+  }
+  .wrapper h2{
+    font-size: 18px;
+  }
+  .wrapper h3 {
+    font-size: 16px;
+  }
+  .wrapper h1 {
+    font-size: 40px;
+  }
+  .arrow {
+    margin-top: 8rem;
+  }
+  .hire-me{
+    margin-top: 2rem;
+  }
 }
 </style>

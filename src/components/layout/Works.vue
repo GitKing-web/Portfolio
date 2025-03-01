@@ -4,28 +4,28 @@ import { ref, onMounted, onUnmounted } from "vue";
 const works = ref([
   {
     title: "Banking App",
-    img: new URL("/images/banking-app.png", import.meta.url).href,
+    img: "/images/banking-app.png",
     description: "A secure and user-friendly banking application with real-time transactions.",
     stack: "Vue.js, TailwindCSS, Firebase",
     link: "#",
   },
   {
     title: "Finance Tracker",
-    img: new URL("/images/finance-tracker.png", import.meta.url).href,
+    img: "/images/finance-tracker.png",
     description: "An intuitive finance tracker that helps users manage expenses and savings.",
     stack: "React, Node.js, MongoDB",
     link: "#",
   },
   {
     title: "E-Commerce UI",
-    img: new URL("/images/ecommerce-ui.png", import.meta.url).href,
+    img: "/images/ecommerce-ui.png",
     description: "A modern and responsive e-commerce UI with seamless user experience.",
     stack: "Next.js, Styled-Components",
     link: "#",
   },
   {
     title: "Stock Trading App",
-    img: new URL("/images/stock-trading.png", import.meta.url).href,
+    img: "/images/stock-trading.png",
     description: "An AI-powered stock trading platform with real-time market data.",
     stack: "Vue.js, Python, Flask, WebSockets",
     link: "#",
@@ -57,10 +57,9 @@ onUnmounted(() => {
     <h1>My Works</h1>
 
     <div class="slider">
-      <button @click="prevSlide" class="nav-button left">&lt;</button>
 
       <div class="slide">
-        <img :src="works[currentIndex].img" :alt="works[currentIndex].title" class="work-img" />
+        <img :src="works[currentIndex].img"  class="work-img" />
         <div class="work-info">
           <h3>{{ works[currentIndex].title }}</h3>
           <p>{{ works[currentIndex].description }}</p>
@@ -70,8 +69,6 @@ onUnmounted(() => {
           </a>
         </div>
       </div>
-
-      <button @click="nextSlide" class="nav-button right">&gt;</button>
     </div>
   </div>
 </template>
@@ -80,19 +77,18 @@ onUnmounted(() => {
 /* Main Section - Center everything */
 .works-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh; /* Full height of viewport */
-  width: 100%;
+  flex-direction: column;
+  /* justify-content: center; */
   background: white;
   color: #232a35;
-  text-align: center;
 }
 
 h1 {
+  text-transform: uppercase;
   font-size: 48px;
   font-weight: bold;
+  margin-top: 3rem;
   margin-bottom: 30px;
 }
 
@@ -102,9 +98,10 @@ h1 {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
   width: 90%;
   max-width: 900px;
-  height: 550px; /* Increased height */
+  height: 500px; /* Increased height */
 }
 
 /* Slide */
@@ -134,7 +131,7 @@ h1 {
   margin-top: 15px;
   height: 300px;
   overflow: hidden;
-  text-align: center;
+  /* text-align: center; */
 }
 
 h3 {
@@ -198,29 +195,9 @@ p {
 
 /* Responsive */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 36px;
-  }
-
-  .slider {
-    height: 500px;
-  }
-
-  .slide {
-    padding: 20px;
-  }
-
-  .nav-button {
-    font-size: 20px;
-    padding: 8px;
-  }
-
-  .nav-button.left {
-    left: -30px;
-  }
-
-  .nav-button.right {
-    right: -30px;
-  }
+h1{
+  font-size: 30px;
+  margin-top: 2rem;
+}
 }
 </style>
