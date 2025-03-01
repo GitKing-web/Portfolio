@@ -2,21 +2,21 @@
 const data = [
     {
         id: 1,
-        img: '/src/assets/images/photo.png',
+        img: '/images/photo.png',
         msg: 'Working with King was an absolute pleasure! He exceeded expectations and delivered outstanding results.',
         user: 'Esther',
         post: 'CEO, S.U.E Enterprises'
     },
     {
         id: 2,
-        img: '/src/assets/images/pp.jpeg',
+        img: '/images/pp.jpeg',
         msg: 'Professional, efficient, and detail-oriented. King transformed our project beautifully!',
         user: 'Mujahid',
         post: 'Founder, AppZeent.co'
     },
     {
         id: 3,
-        img: '/src/assets/images/photo.png',
+        img: '/images/photo.png',
         msg: 'King is a skilled developer who understands business needs. Highly recommend!',
         user: 'Ruth',
         post: 'Manager, Microsoft'

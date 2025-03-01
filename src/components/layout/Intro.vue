@@ -58,7 +58,7 @@ onMounted(() => {
   position: relative;
   padding: 20px;
   box-sizing: border-box;
-  background: url("/src/assets/images/pp.jpeg") no-repeat center center;
+  background: url("/images/pp.jpeg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   color: aliceblue;

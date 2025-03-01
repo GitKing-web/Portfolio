@@ -18,7 +18,7 @@ const submitForm = (event) => {
     <div class="contact" id="contact">
         <div class="contact-card">
             <!-- Handshake Image -->
-            <img src="/src/assets/images/handshake.png" alt="Handshake Illustration" class="handshake-img">
+            <img src="/images/handshake.png" alt="Handshake Illustration" class="handshake-img">
 
             <!-- Contact Form -->
             <div class="form-container">
