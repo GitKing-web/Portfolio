@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 const categories = ["Featured", "Web App", "Resume", "Branding"];
 const activeCategory = ref("Featured");
@@ -28,6 +28,8 @@ const portfolioItems = {
 const setActiveCategory = (category) => {
   activeCategory.value = category;
 };
+
+const filteredItems = computed(() => portfolioItems[activeCategory.value]);
 </script>
 
 <template>
@@ -45,8 +47,8 @@ const setActiveCategory = (category) => {
     </ul>
     
     <div class="container">
-      <div v-for="(item, index) in portfolioItems[activeCategory]" :key="index" class="item">
-        <img :src="item.img" alt="" />
+      <div v-for="(item, index) in filteredItems" :key="index" class="item">
+        <img :src="item.img" alt="" loading="lazy" />
         <h3>{{ item.title }}</h3>
       </div>
     </div>
@@ -79,6 +81,8 @@ ul {
   margin-bottom: 35px;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 li {
@@ -152,6 +156,11 @@ h3 {
   font-weight: 500;
   border-radius: 5px;
   color: white;
+  transition: opacity 0.3s ease;
+}
+
+.item:hover h3 {
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -167,6 +176,37 @@ h3 {
   li {
     font-size: 13px;
     padding: 10px 18px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering items */
+    gap: 20px;
+    width: 100%;
+  }
+
+  .item {
+    width: 90%; /* Ensures items don’t shrink too much */
+    max-width: 350px;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  h3 {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
   }
 }
 </style>

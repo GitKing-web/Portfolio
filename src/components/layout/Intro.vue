@@ -54,12 +54,14 @@ onMounted(() => {
   justify-content: center;
   height: 100vh;
   width: 100%;
-  overflow: hidden; /* Prevents content from overflowing */
-  background: url("/src/assets/images/pp.jpeg") no-repeat center;
-  background-size: cover;
-  color: aliceblue;
   text-align: center;
   position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  background: url("/src/assets/images/pp.jpeg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: aliceblue;
 }
 
 /* Wrapper for content */
@@ -71,12 +73,18 @@ onMounted(() => {
   width: 90%;
   max-width: 800px;
   padding: 20px;
+  text-align: center;
 }
 
 /* Text Content */
+.wrapper h1, .wrapper h2, .wrapper h3 {
+  margin: 0;
+  padding: 5px 0;
+  word-wrap: break-word;
+}
+
 .wrapper h1 {
   font-size: 50px;
-  margin: 10px 0;
 }
 
 .wrapper h2 {
@@ -85,6 +93,10 @@ onMounted(() => {
 
 .wrapper h3 {
   font-size: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .wrapper span {
@@ -98,20 +110,21 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 
-/* Hire Me Button */
 .hire-me {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
   text-decoration: none;
   padding: 12px 20px;
   background: crimson;
   color: white;
   border-radius: 10px;
-  margin-top: 3rem;
   font-size: 18px;
   transition: 0.3s ease-in-out;
 }
@@ -127,13 +140,12 @@ onMounted(() => {
 
 /* Blinking Arrow */
 .arrow {
-  position: absolute;
-  bottom: 30px;
-  right: 50px;
   font-size: 30px;
   animation: blink 5s infinite;
   color: white;
   text-decoration: none;
+  position: static;
+  margin-top: 20px;
 }
 
 @keyframes blink {
@@ -143,67 +155,25 @@ onMounted(() => {
 
 /* RESPONSIVENESS */
 @media (max-width: 1024px) {
-  .wrapper h1 {
-    font-size: 40px;
-  }
-
-  .wrapper h2 {
-    font-size: 28px;
-  }
-
-  .wrapper h3 {
-    font-size: 22px;
-  }
+  .wrapper h1 { font-size: 40px; }
+  .wrapper h2 { font-size: 28px; }
+  .wrapper h3 { font-size: 22px; }
 }
 
 @media (max-width: 768px) {
-  .intro {
-    height: 100vh;
-    padding: 20px;
-  }
-
-  .wrapper h1 {
-    font-size: 36px;
-  }
-
-  .wrapper h2 {
-    font-size: 26px;
-  }
-
-  .wrapper h3 {
-    font-size: 20px;
-  }
-
-  .hire-me {
-    font-size: 16px;
-    padding: 10px 16px;
-  }
-
-  .arrow {
-    font-size: 24px;
-  }
+  .intro { height: 100vh; padding: 20px; }
+  .wrapper h1 { font-size: 36px; }
+  .wrapper h2 { font-size: 26px; }
+  .wrapper h3 { font-size: 20px; }
+  .hire-me { font-size: 16px; padding: 10px 16px; }
+  .arrow { font-size: 24px; }
 }
 
 @media (max-width: 480px) {
-  .wrapper h1 {
-    font-size: 30px;
-  }
-
-  .wrapper h2 {
-    font-size: 22px;
-  }
-
-  .wrapper h3 {
-    font-size: 18px;
-  }
-
-  .hire-me {
-    font-size: 14px;
-    padding: 8px 14px;
-  }
-
-  .arrow {
-    font-size: 20px;
-  }
+  .wrapper h1 { font-size: 28px; }
+  .wrapper h2 { font-size: 20px; }
+  .wrapper h3 { font-size: 16px; flex-wrap: wrap; }
+  .hire-me { font-size: 14px; padding: 10px 16px; }
+  .arrow { font-size: 22px; }
 }
 </style>
