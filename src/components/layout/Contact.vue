@@ -115,7 +115,7 @@ button:hover {
         width: 100%;
     }
     .contact-card{
-        margin-top: -30rem;
+        margin-top: -10rem;
     }
     
 }

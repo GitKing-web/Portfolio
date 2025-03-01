@@ -173,7 +173,7 @@ h3 {
     justify-content: center;
   }
   li{
-    padding: 10px 12px;
+    padding: 10px 7px;
     font-size: 13px;
   }
   .item{
