@@ -6,22 +6,22 @@ const activeCategory = ref("Featured");
 
 const portfolioItems = {
   Featured: [
-    { title: "Banking App", img: "/src/assets/images/photo.png" },
-    { title: "Finance Tracker", img: "/src/assets/images/photo.png" },
-    { title: "E-Commerce UI", img: "/src/assets/images/photo.png" },
-    { title: "Stock Trading App", img: "/src/assets/images/photo.png" },
+    { title: "Banking App", img: "/images/photo.png" },
+    { title: "Finance Tracker", img: "/images/photo.png" },
+    { title: "E-Commerce UI", img: "/images/photo.png" },
+    { title: "Stock Trading App", img: "/images/photo.png" },
   ],
   "Web App": [
-    { title: "Task Manager", img: "/src/assets/images/photo.png" },
-    { title: "Social Media Dashboard", img: "/src/assets/images/photo.png" },
+    { title: "Task Manager", img: "/images/photo.png" },
+    { title: "Social Media Dashboard", img: "/images/photo.png" },
   ],
   Resume: [
-    { title: "Professional Resume", img: "/src/assets/images/photo.png" },
-    { title: "Creative Portfolio", img: "/src/assets/images/photo.png" },
+    { title: "Professional Resume", img: "/images/photo.png" },
+    { title: "Creative Portfolio", img: "/images/photo.png" },
   ],
   Branding: [
-    { title: "Logo Design", img: "/src/assets/images/photo.png" },
-    { title: "Business Card", img: "/src/assets/images/photo.png" },
+    { title: "Logo Design", img: "/images/photo.png" },
+    { title: "Business Card", img: "/images/photo.png" },
   ],
 };
 
