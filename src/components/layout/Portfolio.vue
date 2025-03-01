@@ -64,6 +64,8 @@ const filteredItems = computed(() => portfolioItems[activeCategory.value]);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Center everything */
+  min-height: 100vh; /* Ensures the section takes the full viewport height */
 }
 
 h1 {
@@ -117,6 +119,9 @@ li:hover {
   gap: 30px;
   width: 100%;
   max-width: 1200px;
+  min-height: 80vh; /* Increased container height */
+  align-items: center;
+  justify-content: center; /* Ensures items are centered */
 }
 
 .item {
@@ -127,6 +132,7 @@ li:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: #f8f9fa;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centers text */
 }
 
 .item:hover {
@@ -189,7 +195,7 @@ h3 {
   .item {
     width: 90%; /* Ensures items don’t shrink too much */
     max-width: 350px;
-    text-align: center;
+    /* text-align: center; */
   }
 
   img {
