@@ -116,6 +116,7 @@ h1 {
   width: 100%;
   height: 100%;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -131,6 +132,8 @@ h1 {
 /* Text Info */
 .work-info {
   margin-top: 15px;
+  height: 300px;
+  overflow: hidden;
   text-align: center;
 }
 

@@ -166,7 +166,7 @@ onMounted(() => {
   .wrapper h2 { font-size: 26px; }
   .wrapper h3 { font-size: 20px; }
   .hire-me { font-size: 16px; padding: 10px 16px; }
-  .arrow { font-size: 24px; }
+  .arrow { font-size: 24px; margin-top: 8rem; }
 }
 
 @media (max-width: 480px) {
