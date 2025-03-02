@@ -50,7 +50,7 @@ const data = [
 
 <style scoped>
 .testimonials {
-    background-color: #fff;
+    background-color: white;
     text-align: center;
     padding: 60px 20px;
 }
@@ -124,8 +124,14 @@ img {
     color: #777;
 }
 @media (max-width:768px) {
+    h1{
+        font-size: 20px;
+    }
     .card{
-        width: 100%;
+        font-size: 500px;
+    }
+    .container{
+        margin-left: -38px;
     }
 }
 </style>

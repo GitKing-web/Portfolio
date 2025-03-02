@@ -155,9 +155,6 @@ onMounted(() => {
 
 /* RESPONSIVENESS */
 @media (max-width:768px) {
-  .content-wrapper {
-    margin-top: -15rem;
-  }
   .wrapper h2{
     font-size: 18px;
   }

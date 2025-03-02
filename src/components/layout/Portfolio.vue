@@ -10,6 +10,8 @@ const portfolioItems = {
     { title: "Finance Tracker", img: "/images/photo.png" },
     { title: "E-Commerce UI", img: "/images/photo.png" },
     { title: "Stock Trading App", img: "/images/photo.png" },
+    { title: "Finance Tracker", img: "/images/photo.png" },
+    { title: "E-Commerce UI", img: "/images/photo.png" },
   ],
   "Web App": [
     { title: "Task Manager", img: "/images/photo.png" },
@@ -81,18 +83,17 @@ ul {
   margin: 10px;
   padding: 0;
   list-style: none;
-  gap: 20px;
 }
 
 li {
   font-size: 14px;
-  padding: 12px 24px;
+  margin-right: 50px;
+  padding: 10px 14px;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 15px;
   background: linear-gradient(135deg, #f8f9fa, #e9ecef);
   transition: all 0.3s ease;
   font-weight: 500;
-  text-transform: uppercase;
   letter-spacing: 1px;
   color: #444;
   border: 1px solid #ddd;
@@ -114,16 +115,14 @@ li:hover {
   width: 70%;
   display: flex;align-items: center; justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 3rem;
   overflow: hidden;
   
 }
 
 .item {
   width: 220px;
-  height: 100%;
-  margin-top: 10px 20px;
+  height: 200px;
+  margin: 10px 20px;
   display: flex;
   align-items: center; justify-content: center;
   border-radius: 12px;
@@ -136,14 +135,14 @@ li:hover {
 
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 12px;
   object-fit: cover;
   transition: filter 0.3s ease;
 }
 
 .item:hover img {
-  filter: brightness(90%);
+  filter: brightness(70%);
 }
 
 h3 {
@@ -171,15 +170,19 @@ h3 {
   ul{
     flex-wrap: wrap;
     justify-content: center;
+    margin: 10px 0;
   }
   li{
-    padding: 10px 7px;
     font-size: 13px;
+    margin-right: 20px;
   }
   .item{
-    height: 200px;
-    width: 100%;
+    height: 100px;
+    width: 150px;
     overflow: hidden;
+  }
+  .container{
+    width: 100%;
   }
 }
 

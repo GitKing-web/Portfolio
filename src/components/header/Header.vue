@@ -141,8 +141,5 @@ function togglenav() {
   .cred{
     display: none;
   }
-  .logo{
-    font-size: 20px;
-  }
 }
 </style>

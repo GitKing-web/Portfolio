@@ -111,11 +111,13 @@ button:hover {
     margin-top: 10px;
 }
 @media (max-width:768px) {
-    .form-container{
-        width: 100%;
+    input, textarea{
+        width: 350px;
+        height: 20px;
     }
     .contact-card{
-        margin-top: -10rem;
+        height: 80%;
+        margin-right: 37px;
     }
     
 }

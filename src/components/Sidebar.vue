@@ -54,4 +54,10 @@ li a {
     text-decoration: none;
     color: aliceblue;
 }
+
+@media (max-width: 768px) {
+    .sidebar{
+        width: 300px;
+    }
+}
 </style>

@@ -53,7 +53,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="works-section">
+  <div class="works" id="works">
     <h1>My Works</h1>
 
     <div class="slider">
@@ -75,7 +75,7 @@ onUnmounted(() => {
 
 <style scoped>
 /* Main Section - Center everything */
-.works-section {
+.works {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -196,7 +196,7 @@ p {
 /* Responsive */
 @media (max-width: 768px) {
 h1{
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 2rem;
 }
 }
